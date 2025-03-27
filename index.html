@@ -9,24 +9,56 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100 text-gray-900">
-    <header class="bg-blue-200 text-black p-6 text-center text-2xl font-bold">
+    <header class="bg-blue-200 text-black p-4 text-center text-xl md:text-2xl font-bold">
         Обучение кулинарии
     </header>
-    <nav class="bg-gray-200 p-4 text-center">
-        <a href="courses.html" class="mx-2 text-blue-600">Кулинарные курсы</a>
-        <a href="education.html" class="mx-2 text-blue-600">Обучение</a>
-        <a href="colleges.html" class="mx-2 text-blue-600">Колледжи</a>
-        <a href="masterclasses.html" class="mx-2 text-blue-600">Мастер-классы</a>
-        <a href="world_cuisine.html" class="mx-2 text-blue-600">Мировая кухня</a>
-    </nav>
-    <main class="container mx-auto p-6">
-        <section class="mb-8">
-            <h1 class="text-4xl font-bold mb-4">Добро пожаловать в мир кулинарии!</h1>
-            <p class="text-lg">Выберите направление, которое вам интересно, и начните свое обучение уже сегодня.</p>
+
+    <!-- Гамбургер-меню -->
+    <div class="bg-gray-200 p-4 text-center md:hidden">
+        <button id="menu-btn" class="text-blue-600 font-semibold text-lg">☰ Меню</button>
+        <div id="menu" class="hidden flex flex-col mt-2 space-y-2">
+            <a href="courses.html" class="text-blue-600">Кулинарные курсы</a>
+            <a href="education.html" class="text-blue-600">Обучение</a>
+            <a href="colleges.html" class="text-blue-600">Колледжи</a>
+            <a href="masterclasses.html" class="text-blue-600">Мастер-классы</a>
+            <a href="world_cuisine.html" class="text-blue-600">Мировая кухня</a>
+        </div>
+    </div>
+
+    <main class="container mx-auto p-4 md:p-6">
+        <section class="mb-6 text-center">
+            <h1 class="text-2xl md:text-4xl font-bold mb-4">Добро пожаловать в мир кулинарии!</h1>
+            <p class="text-base md:text-lg">Выберите направление, которое вам интересно, и начните свое обучение уже сегодня.</p>
         </section>
+
+        <!-- Кнопки репостинга -->
+        <div class="flex flex-wrap justify-center space-x-2 space-y-2 md:space-y-0 md:space-x-4 mt-4">
+            <a href="https://vk.com/share.php?url=https://yourwebsite.com" target="_blank" class="p-2 bg-blue-500 text-white rounded-lg text-sm md:text-base">ВКонтакте</a>
+            <a href="https://t.me/share/url?url=https://yourwebsite.com&text=Рекомендую посмотреть!" target="_blank" class="p-2 bg-blue-400 text-white rounded-lg text-sm md:text-base">Telegram</a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://yourwebsite.com" target="_blank" class="p-2 bg-blue-700 text-white rounded-lg text-sm md:text-base">Facebook</a>
+            <a href="https://connect.ok.ru/offer?url=https://yourwebsite.com" target="_blank" class="p-2 bg-orange-500 text-white rounded-lg text-sm md:text-base">Одноклассники</a>
+            <a href="https://twitter.com/intent/tweet?url=https://yourwebsite.com&text=Посмотрите это!" target="_blank" class="p-2 bg-black text-white rounded-lg text-sm md:text-base">X (Twitter)</a>
+        </div>
+
+        <!-- Кнопки связи в мессенджерах -->
+        <div class="flex flex-wrap justify-center space-x-2 space-y-2 md:space-y-0 md:space-x-4 mt-6">
+            <a href="https://wa.me/79991234567" target="_blank" class="p-2 bg-green-500 text-white rounded-lg text-sm md:text-base">WhatsApp</a>
+            <a href="viber://chat?number=+79991234567" target="_blank" class="p-2 bg-purple-500 text-white rounded-lg text-sm md:text-base">Viber</a>
+            <a href="https://m.me/yourusername" target="_blank" class="p-2 bg-blue-600 text-white rounded-lg text-sm md:text-base">Messenger</a>
+            <a href="https://vk.me/yourusername" target="_blank" class="p-2 bg-blue-500 text-white rounded-lg text-sm md:text-base">VK Messages</a>
+            <a href="https://www.instagram.com/direct/t/yourusername" target="_blank" class="p-2 bg-pink-500 text-white rounded-lg text-sm md:text-base">Instagram Direct</a>
+        </div>
     </main>
-    <footer class="bg-gray-800 text-white text-center p-4 mt-6">
+
+    <footer class="bg-gray-800 text-white text-center p-3 md:p-4 mt-6 text-sm md:text-base">
         &copy; 2025 Обучение кулинарии. Все права защищены.
     </footer>
+
+    <script>
+        // Гамбургер-меню для мобильных устройств
+        document.getElementById('menu-btn').addEventListener('click', function () {
+            document.getElementById('menu').classList.toggle('hidden');
+        });
+    </script>
 </body>
 </html>
